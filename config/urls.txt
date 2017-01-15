@@ -1,0 +1,6 @@
+http://www.gisplein.nl/AHN/raw/m_[ifield].zip
+http://www.gisplein.nl/AHN/fill/f[ifield].zip
+http://geodata.nationaalgeoregister.nl/ahn2/extract/ahn2_5m/ahn2_5_[ifield].tif.zip
+http://geodata.nationaalgeoregister.nl/ahn2/extract/ahn2_05m_int/i[ifield].tif.zip
+http://geodata.nationaalgeoregister.nl/ahn2/extract/ahn2_gefilterd/g[ifield].laz.zip
+http://geodata.nationaalgeoregister.nl/ahn2/extract/ahn2_uitgefilterd/u[ifield].laz.zip

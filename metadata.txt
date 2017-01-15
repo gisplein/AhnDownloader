@@ -1,0 +1,39 @@
+# This file contains metadata for your plugin. Since 
+# version 2.0 of QGIS this is the proper way to supply 
+# information about a plugin. The old method of 
+# embedding metadata in __init__.py will 
+# is no longer supported since version 2.0.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=ahndownloader
+qgisMinimumVersion=2.10
+description=Select and download tiled dataset of Dutch elevation maps
+version=1.0
+author=gisplein
+email=info@gisplein.nl
+
+about=This plugin can be used to retrieve the desired data from a tiled dataset
+
+tracker=https://github.com/gisplein/ahnDownloader
+repository=https://github.com/gisplein/ahnDownloader
+# End of mandatory metadata
+
+# Recommended items:
+
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=AHN, hoogtekaart, raster, index, download
+
+homepage=https://github.com/gisplein/ahnDownloader
+category=Plugins
+icon=icon.png
+# experimental flag
+experimental=True
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+

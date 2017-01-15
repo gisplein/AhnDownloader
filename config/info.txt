@@ -1,0 +1,20 @@
+<BR>
+This plugin is created by Michiel Bootsma as a promotional product for GISplein, an association of independent GIS specialists. 
+<BR>
+<BR>
+You can use this tool for downloading the desired tiles from a tiled dataset by selecting features of a tile-index layer. 
+For the Netherlands there is <a href="http://www.ahn.nl">high-resolution elevation data</a> available for free download. 
+This dataset consists of over 1000 tiles.  You can add the tile-index to the mapcanvas by opening one of the WFS-layers. 
+<BR>
+<BR>
+In the configuration we already included some url's from the <a href="https://www.pdok.nl/nl/producten/pdok-downloads/atomfeeds">Dutch geoportal</a>. 
+The reference to a specific tile is replaced with the string <strong>'[ifield]'</strong>. 
+During the download session, this tag is being replaced with the chosen attribute.
+<BR>
+<BR>
+Although this tool was created especially for the Dutch elevation data, there probably are other datasets that can be retrieved using this tool. 
+Please keep us informed about your findings.
+<BR>
+<BR>
+If you have any questions don't hesitate to <A HREF="mailto:info@gisplein.nl">contact</A> us. 
+<BR>

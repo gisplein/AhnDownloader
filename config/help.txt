@@ -1,0 +1,106 @@
+<h1>AHNdownloader</h1>
+QGIS plugin to retrieve tiles of a dataset by selecting features of an opened vector layer in the mapcanvas.
+
+<h2>Installation</h2>
+<ul>
+<li>
+<h3>In QGIS, select Plugins > Manage and Install Plugins... </h3>
+</li>
+<li>
+<h3>Download and unzip to your QGIS plugins directory</h3>
+</li>
+</ul>
+
+<h2>Usage</h2>
+<hr>
+<ul>
+<li>
+<h3>Open a vector layer with a valid tile-index field</h3>
+</li>
+<li>
+<h3>select some features</h3>
+</li>
+<li>
+<h3>select the vector layer and set the index-field</h3>
+</li>
+<li>
+<h3>select the source URL of the tiled dataset</h3>
+</li>
+<li>
+<h3>Set the output location, existing files with the same name will be overwritten</h3>
+</li>
+<li>
+<h3>choose whether the result should be extracted</h3>
+</li>
+<li>
+<h3>press the download button to start</h3>
+</li>
+</ul>
+
+<p>The download process is handled by a separate thread. Therefore QGIS can preform other tasks during the download. 
+For testing purposes we have prepared a tiled dataset with high-resolution elevation data of one of the Dutch islands. 
+The first dataset contains the raw data. The second one contains modified data: NoData zones are filled with the most probable value based on the topography.</p>
+
+The plugin is already configured for this test. You can just select WFS: <strong>testGISplein</strong> and one of the <strong>source URL's </strong> to 
+download this example.
+<ul>
+<li>http://www.gisplein.nl/AHN/raw/m_[ifield].zip</li>
+<li>http://www.gisplein.nl/AHN/fill/f[ifield].zip</li>
+</ul>
+
+<h2>Open WFS layer (optional)</h2>
+<ul>
+<li>
+<h3>connect</h3>add the selected service to the canvas
+</li>
+<li>
+<h3>new</h3>add a new service. This will open a dialog where you can enter the specifications of a new service, e.g:
+<ul style="list-style: none;">
+<li>name: test GISplein</li>
+<li>url: http://77.72.146.109/geoserver/wfs?</li>
+<li>service: WFS</li>
+<li>version: 1.0.0</li>
+<li>request: GetFeature</li>
+<li>typename: GISPLEIN:tile_index</li>
+<li>srsname: EPSG:28992</li>
+</ul>
+</li>
+<li>
+<h3>delete</h3><p>delete the selected service completely</p>
+</li>
+<li>
+<h3>edit:</h3><p>edit the configuration of the selected service</p>
+</li>
+</ul>
+
+
+<h2>Select index layer</h2>
+Choose the vector layer and set the field holding the tile-index
+
+<h2>Source URL</h2>
+Select or edit the source URL of the tiled dataset. When an existing URL is modified it will be saved in a new record. URLs that are no longer used can be removed. 
+
+
+<h2>Results</h2>
+After the download is completed, the <strong>results</strong> tab is selected showing some info about the outcome.  
+A temporary vector layer is created with the results. This allows a new attempt to retrieve the missing tiles. To start a new download session you have to push the reset button on the results tab.  
+
+<h2>Loading the raster tiles </h2>
+When using the raster files in QGIS for analysis or visualisation it isn't necessary to merge al the files together to one big raster dataset. GDAL / QGIS comes with 
+the functionality to create a Virtual Raster. 
+
+<strong>Menubar > Raster > Miscellaneous > Build Virtual Raster (Catalog)...</strong>
+
+The .VRT file is just a XML file holding the geometric metadata of the tiles. Only the necessary data is loaded by QGIS. 
+
+<h2>Reporting bugs</h2> 
+Please report any problems you have with the AHNdownloader. To ensure no time or effort is wasted in bug reporting, please follow these steps: 
+Make sure you are using the latest release of the plugin 
+Check the issues on Github to see whether the bug has already been reported, and if so, read through all the comments on the issue, and add any additional information from your experience of the bug 
+Make sure you can reproduce the bug reliably
+  
+Raise a <a href"https://github.com/gisplein/ahnDownloader">Github</a> issue, including: 
+the AHNdownloader version (or make it clear you are using Github master branch) 
+any Python error text/stack trace which occurs 
+a link to the dataset you used, if possible 
+<BR>

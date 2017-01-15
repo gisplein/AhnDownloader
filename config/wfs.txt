@@ -1,0 +1,4 @@
+test GISplein,http://77.72.146.109/geoserver/wfs?,GetFeature,GISPLEIN:tile_index,EPSG:28992,WFS,1.0.0
+AHN1,https://geodata.nationaalgeoregister.nl/ahn1/wfs?,GetFeature,ahn1:ahn1_bladindex,EPSG:28992,WFS,1.0.0
+AHN2,https://geodata.nationaalgeoregister.nl/ahn2/wfs?,GetFeature,ahn2:ahn2_bladindex,EPSG:28992,WFS,1.0.0
+AHN3,https://geodata.nationaalgeoregister.nl/ahn3/wfs?,GetFeature,ahn3:ahn3_bladindex,EPSG:28992,WFS,1.0.0
